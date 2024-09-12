@@ -97,7 +97,7 @@ def convert_docx_images(docx_filepath, output_filepath, quality, dpi):
                 with Image.open(filepath) as image:
                     if not has_transparency(image):
                         # Resize and convert to JPG
-                        target_width = 6*dpi  # 6 inches * 200 PPI
+                        target_width = 6*dpi  # 6 inches * DPI
                         resized_image = resize_image(image.convert('RGB'), target_width, dpi=dpi)
                         
                         # Save the new image as JPG
